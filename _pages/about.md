@@ -11,7 +11,7 @@ profile:
   more_info: >
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # the social icons are rendered below the name instead of at the bottom
 
 announcements:
   enabled: false # includes a list of news items
@@ -23,6 +23,11 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: # leave blank to include all the blog posts
 ---
+
+<div class="social" style="margin-bottom: 1.5rem; text-align: left">
+  <div class="contact-icons" style="font-size: 1.75rem">{% social_links %}</div>
+  {% if site.contact_note %}<div class="contact-note">{{ site.contact_note }}</div>{% endif %}
+</div>
 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
