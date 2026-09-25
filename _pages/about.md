@@ -50,7 +50,7 @@ latest_posts:
      * Change this one value to control both the email-to-Education gap
      * and the Education/profile-row-to-Publications gap.
      */
-    --about-section-vertical-gap: 1.0rem;
+    --about-section-vertical-gap: 2.0rem;
   }
 
   .about-hero {
