@@ -42,36 +42,42 @@
     </div>
 
     <div class="publication-links links" aria-label="Publication links">
-      <a
-        href="{{ entry.website }}"
-        class="btn btn-sm z-depth-0"
-        aria-label="Website for {{ entry.title | escape }}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="fa-solid fa-globe" aria-hidden="true"></i>
-        Website
-      </a>
-      <a
-        href="{{ entry.arxiv_url }}"
-        class="btn btn-sm z-depth-0"
-        aria-label="arXiv preprint for {{ entry.title | escape }}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="ai ai-arxiv" aria-hidden="true"></i>
-        arXiv
-      </a>
-      <a
-        href="{{ entry.ieee }}"
-        class="btn btn-sm z-depth-0"
-        aria-label="IEEE publication for {{ entry.title | escape }}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
-        IEEE
-      </a>
+      {% if entry.website %}
+        <a
+          href="{{ entry.website }}"
+          class="btn btn-sm z-depth-0"
+          aria-label="Website for {{ entry.title | escape }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+          Website
+        </a>
+      {% endif %}
+      {% if entry.arxiv_url %}
+        <a
+          href="{{ entry.arxiv_url }}"
+          class="btn btn-sm z-depth-0"
+          aria-label="arXiv preprint for {{ entry.title | escape }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="ai ai-arxiv" aria-hidden="true"></i>
+          arXiv
+        </a>
+      {% endif %}
+      {% if entry.ieee %}
+        <a
+          href="{{ entry.ieee }}"
+          class="btn btn-sm z-depth-0"
+          aria-label="IEEE publication for {{ entry.title | escape }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+          IEEE
+        </a>
+      {% endif %}
     </div>
   </div>
 </article>

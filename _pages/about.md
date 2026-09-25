@@ -83,7 +83,7 @@ latest_posts:
   }
 
   .education-degree + .education-degree {
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
   }
 
   .education-degree-heading {
@@ -151,14 +151,18 @@ latest_posts:
     align-items: start;
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: minmax(180px, 24%) minmax(0, 1fr);
+    grid-template-columns: 12rem minmax(0, 1fr);
     width: 100%;
   }
 
+  .publication-thumbnail {
+    width: 12rem;
+  }
+
   .publication-thumbnail img {
-    aspect-ratio: 4 / 3;
     border-radius: 0.375rem;
     display: block;
+    height: 9rem;
     object-fit: cover;
     width: 100%;
   }
@@ -190,8 +194,8 @@ latest_posts:
     }
 
     .publication-thumbnail {
-      max-width: 20rem;
-      width: 100%;
+      max-width: 100%;
+      width: 12rem;
     }
   }
 </style>
