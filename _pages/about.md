@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Doctoral Student at the Robotics Institute of Carnegie Mellon University <br> sunyuw@andrew.cmu.edu
 
 profile:
   align: right
