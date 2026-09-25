@@ -11,7 +11,7 @@ profile:
   more_info: >
 
 selected_papers: false # selected publications are rendered manually below with a custom heading
-social: false # the social icons are rendered below the profile image instead of at the bottom
+social: true # render the social icons directly below the profile image
 
 announcements:
   enabled: false # includes a list of news items
@@ -24,11 +24,6 @@ latest_posts:
   limit: # leave blank to include all the blog posts
 ---
 
-<div class="profile float-right social" style="clear: right; margin-top: -0.75rem; margin-bottom: 1.5rem">
-  <div class="contact-icons" style="font-size: 2.25rem">{% social_links %}</div>
-  {% if site.contact_note %}<div class="contact-note">{{ site.contact_note }}</div>{% endif %}
-</div>
-
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
 Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
@@ -36,6 +31,33 @@ Put your address / P.O. box / other info right below your picture. You can also 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
 
 <style>
+  .about-hero {
+    align-items: start;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 30%);
+    margin-bottom: 0.75rem;
+  }
+
+  .about-hero .post-header,
+  .about-hero .post-title {
+    margin-top: 0;
+  }
+
+  .about-hero .profile {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  .about-profile-social {
+    margin-top: 0.2rem;
+  }
+
+  .about-profile-social .contact-icons {
+    font-size: 2.25rem;
+  }
+
   .publications {
     clear: both;
     margin-top: 0;
@@ -84,6 +106,10 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
   }
 
   @media (max-width: 575px) {
+    .about-hero {
+      grid-template-columns: 1fr;
+    }
+
     .publication-entry {
       grid-template-columns: 1fr;
     }

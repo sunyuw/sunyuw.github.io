@@ -11,7 +11,7 @@
 {% elsif proceedings contains entry.type %}
   {% assign publication_venue = entry.booktitle %}
 {% elsif entry.eprint %}
-  {% assign publication_venue = 'arXiv' %}
+  {% assign publication_venue = 'Under Review' %}
 {% else %}
   {% assign publication_venue = entry.publisher %}
 {% endif %}
@@ -26,10 +26,14 @@
 
     <div class="publication-authors">
       {% for author in entry.author_array %}
-        {% unless forloop.first %}
-          {% if forloop.last %} and {% else %}, {% endif %}
-        {% endunless %}
-        {{ author.first }} {{ author.last }}
+        {%- unless forloop.first %}, {% endunless -%}
+        {% assign author_first = author.first | strip %}
+        {% assign author_last = author.last | strip %}
+        {% if author_first == 'Sunyu' and author_last == 'Wang' %}
+          <u>{{ author.first }} {{ author.last }}</u>
+        {% else %}
+          {{ author.first }} {{ author.last }}
+        {% endif %}
       {% endfor %}
     </div>
 
