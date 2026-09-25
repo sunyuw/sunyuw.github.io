@@ -6,7 +6,7 @@ subtitle: Doctoral Student at the Robotics Institute of Carnegie Mellon Universi
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: profile_image.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
 
@@ -129,7 +129,7 @@ latest_posts:
   }
 
   .about-profile-social .contact-icons {
-    font-size: 2.25rem;
+    font-size: 3.0rem;
   }
 
   .publications {
