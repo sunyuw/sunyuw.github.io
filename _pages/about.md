@@ -10,6 +10,25 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
 
+education:
+  - institution: Carnegie Mellon University
+    degrees:
+      - name: Ph.D. in Robotics
+        years: 2021–2027 (expected)
+        details:
+          - "Advisors: Prof. Nancy Pollard, Prof. Jean Oh"
+  - institution: University of Illinois Urbana-Champaign
+    degrees:
+      - name: M.S. in Mechanical Engineering
+        years: 2019–2021
+        details:
+          - "Advisor: Prof. Joao Ramos"
+          - 'Thesis: <a href="https://www.ideals.illinois.edu/items/121189">A whole-body human-machine interface for dynamic bilateral teleoperation of humanoid robots</a>'
+      - name: B.S. in Mechanical Engineering, Minor in Electrical Engineering
+        years: 2015–2019
+        details:
+          - "GPA: 3.92/4.00. Highest honors"
+
 selected_papers: false # selected publications are rendered manually below with a custom heading
 social: true # render the social icons directly below the profile image
 
@@ -27,7 +46,7 @@ latest_posts:
 <style>
   .post {
     /* Adjust this value to control the gap below the profile/social row. */
-    --profile-publications-gap: 0.75rem;
+    --profile-publications-gap: 0.5rem;
   }
 
   .about-hero {
@@ -43,8 +62,46 @@ latest_posts:
   }
 
   .education h2 {
-    margin-bottom: 0;
+    margin-bottom: 0.65rem;
     margin-top: 1.25rem;
+  }
+
+  .education-school + .education-school {
+    margin-top: 1rem;
+  }
+
+  .education-institution {
+    line-height: 1.3;
+  }
+
+  .education-degree {
+    margin-top: 0.25rem;
+  }
+
+  .education-degree + .education-degree {
+    margin-top: 0.6rem;
+  }
+
+  .education-degree-heading {
+    align-items: baseline;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .education-years {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .education-details {
+    margin-bottom: 0;
+    margin-top: 0.2rem;
+    padding-left: 1.25rem;
+  }
+
+  .education-details li {
+    line-height: 1.35;
   }
 
   .about-hero .post-header,

@@ -18,6 +18,26 @@ layout: default
 
       <section class="education" aria-labelledby="education-heading">
         <h2 id="education-heading">Education</h2>
+        {% for school in page.education %}
+          <div class="education-school">
+            <div class="education-institution"><strong>{{ school.institution }}</strong></div>
+            {% for degree in school.degrees %}
+              <div class="education-degree">
+                <div class="education-degree-heading">
+                  <em>{{ degree.name }}</em>
+                  <span class="education-years">{{ degree.years }}</span>
+                </div>
+                {% if degree.details %}
+                  <ul class="education-details">
+                    {% for detail in degree.details %}
+                      <li>{{ detail }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
       </section>
     </div>
 
