@@ -7,8 +7,7 @@ layout: default
       <header class="post-header">
         <h1 class="post-title">
           {% if site.title == 'blank' %}
-            <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-            {{ site.last_name }}
+            <span class="font-weight-bold">{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}</span>
           {% else %}
             {{ site.title }}
           {% endif %}
@@ -24,7 +23,7 @@ layout: default
             {% for degree in school.degrees %}
               <div class="education-degree">
                 <div class="education-degree-heading">
-                  <em>{{ degree.name }}</em>
+                  <span>{{ degree.name }}</span>
                   <span class="education-years">{{ degree.years }}</span>
                 </div>
                 {% if degree.details %}

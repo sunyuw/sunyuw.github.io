@@ -14,7 +14,7 @@ education:
   - institution: Carnegie Mellon University
     degrees:
       - name: Ph.D. in Robotics
-        years: 2021–2027 (expected)
+        years: 2021–2027(expected)
         details:
           - "Advisors: Prof. Nancy Pollard, Prof. Jean Oh"
   - institution: University of Illinois Urbana-Champaign
@@ -45,8 +45,12 @@ latest_posts:
 
 <style>
   .post {
-    /* Adjust this value to control the gap below the profile/social row. */
-    --profile-publications-gap: 0.5rem;
+    /*
+     * ADJUSTABLE VERTICAL SPACING:
+     * Change this one value to control both the email-to-Education gap
+     * and the Education/profile-row-to-Publications gap.
+     */
+    --about-section-vertical-gap: 1.0rem;
   }
 
   .about-hero {
@@ -63,7 +67,7 @@ latest_posts:
 
   .education h2 {
     margin-bottom: 0.65rem;
-    margin-top: 1.25rem;
+    margin-top: var(--about-section-vertical-gap);
   }
 
   .education-school + .education-school {
@@ -109,6 +113,11 @@ latest_posts:
     margin-top: 0;
   }
 
+  .about-hero .post-header,
+  .about-hero .desc {
+    margin-bottom: 0;
+  }
+
   .about-hero .profile {
     float: none;
     margin: 0;
@@ -130,7 +139,7 @@ latest_posts:
 
   .publication-heading {
     clear: both;
-    margin-top: var(--profile-publications-gap);
+    margin-top: var(--about-section-vertical-gap);
   }
 
   .publications ol.bibliography > li {
