@@ -83,7 +83,7 @@ latest_posts:
   }
 
   .education-degree + .education-degree {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
 
   .education-degree-heading {
