@@ -11,7 +11,7 @@ profile:
   more_info: >
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: false # the social icons are rendered below the name instead of at the bottom
+social: false # the social icons are rendered below the profile image instead of at the bottom
 
 announcements:
   enabled: false # includes a list of news items
@@ -24,7 +24,7 @@ latest_posts:
   limit: # leave blank to include all the blog posts
 ---
 
-<div class="social" style="margin-bottom: 1.5rem; text-align: left">
+<div class="profile float-right social" style="clear: right; margin-bottom: 1.5rem">
   <div class="contact-icons" style="font-size: 1.75rem">{% social_links %}</div>
   {% if site.contact_note %}<div class="contact-note">{{ site.contact_note }}</div>{% endif %}
 </div>
