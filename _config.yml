@@ -361,6 +361,7 @@ scholar:
   style: apa
   locale: en
 
+  sort_by: none # preserve the order of entries in _bibliography/papers.bib
   source: /_bibliography/
   bibliography: papers.bib
   bibliography_template: bib

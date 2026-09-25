@@ -35,6 +35,66 @@ Put your address / P.O. box / other info right below your picture. You can also 
 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
 
-<h2>Publications</h2>
+<style>
+  .publications {
+    clear: both;
+    margin-top: 0;
+  }
+
+  .publication-heading {
+    clear: both;
+  }
+
+  .publications ol.bibliography > li {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .publication-entry {
+    align-items: start;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: minmax(180px, 24%) minmax(0, 1fr);
+    width: 100%;
+  }
+
+  .publication-thumbnail img {
+    aspect-ratio: 4 / 3;
+    border-radius: 0.375rem;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .publication-title {
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .publication-authors,
+  .publication-venue,
+  .publication-links {
+    margin-top: 0.45rem;
+  }
+
+  .publication-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 575px) {
+    .publication-entry {
+      grid-template-columns: 1fr;
+    }
+
+    .publication-thumbnail {
+      max-width: 20rem;
+      width: 100%;
+    }
+  }
+</style>
+
+<h2 class="publication-heading">Publications</h2>
 
 {% include selected_papers.liquid %}

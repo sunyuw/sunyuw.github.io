@@ -1,0 +1,73 @@
+---
+---
+{% assign preview_source = entry.preview %}
+{% unless preview_source contains '://' %}
+  {% assign preview_source = entry.preview | prepend: '/assets/img/publication_preview/' | relative_url %}
+{% endunless %}
+
+{% assign proceedings = 'inproceedings,incollection' | split: ',' %}
+{% if entry.type == 'article' %}
+  {% assign publication_venue = entry.journal %}
+{% elsif proceedings contains entry.type %}
+  {% assign publication_venue = entry.booktitle %}
+{% elsif entry.eprint %}
+  {% assign publication_venue = 'arXiv' %}
+{% else %}
+  {% assign publication_venue = entry.publisher %}
+{% endif %}
+
+<article class="publication-entry">
+  <div class="publication-thumbnail">
+    <img src="{{ preview_source }}" alt="Preview image for {{ entry.title | escape }}" loading="lazy">
+  </div>
+
+  <div class="publication-details">
+    <div class="publication-title">{{ entry.title }}</div>
+
+    <div class="publication-authors">
+      {% for author in entry.author_array %}
+        {% unless forloop.first %}
+          {% if forloop.last %} and {% else %}, {% endif %}
+        {% endunless %}
+        {{ author.first }} {{ author.last }}
+      {% endfor %}
+    </div>
+
+    <div class="publication-venue">
+      <em>{{ publication_venue }}{% if publication_venue and entry.year %}, {% endif %}{{ entry.year }}</em>
+    </div>
+
+    <div class="publication-links links" aria-label="Publication links">
+      <a
+        href="{{ entry.website }}"
+        class="btn btn-sm z-depth-0"
+        aria-label="Website for {{ entry.title | escape }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+        Website
+      </a>
+      <a
+        href="{{ entry.arxiv_url }}"
+        class="btn btn-sm z-depth-0"
+        aria-label="arXiv preprint for {{ entry.title | escape }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="ai ai-arxiv" aria-hidden="true"></i>
+        arXiv
+      </a>
+      <a
+        href="{{ entry.ieee }}"
+        class="btn btn-sm z-depth-0"
+        aria-label="IEEE publication for {{ entry.title | escape }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+        IEEE
+      </a>
+    </div>
+  </div>
+</article>
