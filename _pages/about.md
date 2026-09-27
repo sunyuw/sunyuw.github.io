@@ -24,10 +24,8 @@ education:
         details:
           - "Advisor: Prof. Joao Ramos"
           - 'Thesis: <a href="https://www.ideals.illinois.edu/items/121189">A whole-body human-machine interface for dynamic bilateral teleoperation of humanoid robots</a>'
-      - name: B.S. in Mechanical Engineering, Minor in Electrical Engineering
+      - name: B.S. in Mechanical Engineering
         years: 2015–2019
-        details:
-          - "GPA: 3.92/4.00. Highest honors"
 
 selected_papers: false # selected publications are rendered manually below with a custom heading
 social: true # render the social icons directly below the profile image
